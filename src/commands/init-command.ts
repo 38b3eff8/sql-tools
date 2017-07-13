@@ -1,8 +1,8 @@
 import * as vscode from 'vscode';
 import * as fs from 'fs';
-import * as config from './config';
+import * as config from '../config';
 
-export function initCommand() {
+export default function () {
   if (!vscode.workspace.rootPath) {
     vscode.window.showErrorMessage("SQL-Tools: Cannot init config file without opened folder");
     return;
